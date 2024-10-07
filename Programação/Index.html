@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Page.css">
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <img src="Logo.png" alt="Logo da ">
+        </div>
+        <div class="Nome">
+            <h2 class="great-vibes-regular"> Yasmin Oda</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="Efeito">
+            <div class="Apresentação">
+                <h1 class="libre-baskerville-regular">
+                    Yasmin Oda Lima
+                </h1>
+                <p>
+                    Olá! Sou Yasmin Oda, estudante de Desenvolvimento de Sistemas no SENAI Jacob Lafer. Tenho 16 anos, sou apaixonada por tecnologia, especialmente programação e Desing. Estou sempre buscando novas oportunidades para aprender e colaborar em projetos inovadores.
+                </p>
+                <hr><br>
+                
+                <!-- Informações -->
+                <details>
+                    <summary class="dt_sm1">Educação</summary>
+                    <li><strong>Curso:</strong> Desenvolvimento de Sistemas</li>
+                    <li><strong>Instituição;</strong> SENAI Jacob Lafer</li>
+                </details>
+
+                <details>
+                    <summary class="dt_sm2">Qualidades</summary>
+                    <li>Trabalho em Equipe</li>
+                    <li>Curiosidade</li>
+                    <li>Resolução de Problemas</li>
+                </details>
+
+                <details>
+                    <summary class="dt_sm3">Interesses</summary>
+                    <li>Programação</li>
+                    <li>Design de Interfaces</li>
+                    <li>Inteligência Artificial</li>
+                </details>
+
+                <details>
+                    <summary class="dt_sm4">Contato</summary>
+                    <li><strong>Email:</strong> yasmin.odalima@gmail.com</li>
+                    <li><Strong>Telefone:</Strong>11 99535-6288</li>
+                </details>
+                
+            </div>
+            <aside>
+                <div class="Carousel-fundo">
+
+                    <h3>Quem sou?</h3>
+
+                    <!-- Carousel de imagens -->
+                    <div class="carousel" id="myCarousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <img src="Foto1.jpg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Foto2.jpg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Foto3.jpg" alt="...">
+                            </div>
+                        </div>
+                        <a href="#" class="carousel-control carousel-control-prev" onclick="moveSlide(-1)">
+                            <span class="carousel-control-prev-icon" aria-hidden="true">&#9664;</span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a href="#" class="carousel-control carousel-control-next" onclick="moveSlide(1)">
+                            <span class="carousel-control-next-icon" aria-hidden="true">&#9654;</span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                </div>
+            </div>
+                
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; YasminOda. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JS para botões do Carrousel de imagens -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            document.querySelector('.carousel-inner').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</body>
+</html>
